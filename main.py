@@ -1,11 +1,13 @@
 import sys
 
+
 def main(filepath):
     contents = get_contents(filepath)
     if contents is not None:
         words_counter = word_count(contents)
         chars_counter = char_count(contents)
         print_report(filepath, words_counter, chars_counter)
+
 
 def print_report(filepath, words_counter, chars_counter):
     print(f"\n--- Begin report of {filepath} ---")
@@ -17,7 +19,6 @@ def print_report(filepath, words_counter, chars_counter):
         print(f"The '{char}' character was found {chars_counter[char]} times")
     
     print("\n--- End report ---")
-
 
 
 def get_contents(path):
@@ -32,8 +33,10 @@ def get_contents(path):
 
     return contents
 
+
 def word_count(text):
     return len(text.split())
+
 
 def char_count(text):
     chars = {}
